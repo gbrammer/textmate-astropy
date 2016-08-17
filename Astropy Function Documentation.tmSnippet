@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleUUID</key>
+	<string>E3BADC20-6B0E-11D9-9DC9-000D93589AF6</string>
+	<key>content</key>
+	<string>${1:TBD}
+$0
+Parameters
+----------
+${2/(\A\s*,\s*\Z)|,?\s*([A-Za-z_][a-zA-Z0-9_]*)\s*(=[^,]*)?(,\s*|$)/(?2:$2 \: type\n\n)/g}
+Returns
+-------
+${3/(\A\s*,\s*\Z)|,?\s*([A-Za-z_][a-zA-Z0-9_]*)\s*(=[^,]*)?(,\s*|$)/(?2:$2 \: type\n\n)/g}
+.. note::
+
+.. warning::
+
+# parameters (${1/([^,])?(.*)/(?1:)/}${2:})
+# returns (${2/([^,])?(.*)/(?1:)/}${3:})
+
+</string>
+	<key>name</key>
+	<string>Astropy Function Documentation</string>
+	<key>scope</key>
+	<string>source.python</string>
+	<key>tabTrigger</key>
+	<string>adoc</string>
+	<key>uuid</key>
+	<string>AF0C26CE-FCEA-4405-B4EC-8BE80B286CCD</string>
+</dict>
+</plist>

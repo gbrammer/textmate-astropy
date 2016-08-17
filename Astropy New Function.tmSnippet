@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleUUID</key>
+	<string>E3BADC20-6B0E-11D9-9DC9-000D93589AF6</string>
+	<key>content</key>
+	<string>def ${1:fname}(${3:`if [ "$TM_CURRENT_LINE" != "" ]
+				# poor man's way ... check if there is an indent or not
+				# (cuz we would have lost the class scope by this point)
+				then
+					echo "self"
+				fi`}):
+    """${2:TBD}
+    
+    Parameters
+    ----------
+${3/(\A\s*,\s*\Z)|,?\s*([A-Za-z_][a-zA-Z0-9_]*)\s*(=[^,]*)?(,\s*|$)/(?2:\t$2 \: type\n\n)/g}
+    Returns
+    -------
+${4/(\A\s*,\s*\Z)|,?\s*([A-Za-z_][a-zA-Z0-9_]*)\s*(=[^,]*)?(,\s*|$)/(?2:\t$2 \: type\n\n)/g}
+    .. note::
+    
+    .. warning::
+    
+    # returns (${2/([^,])?(.*)/(?1:)/}${4:})
+    """
+    ${0:pass}</string>
+	<key>name</key>
+	<string>Astropy New Function</string>
+	<key>scope</key>
+	<string>source.python</string>
+	<key>tabTrigger</key>
+	<string>adef</string>
+	<key>uuid</key>
+	<string>BE1BBE29-E409-4E96-A0D4-1658F2CF1034</string>
+</dict>
+</plist>
